@@ -1,0 +1,20 @@
+# Número de versión del api que se quiere utilizar
+apiVersion: v1
+# Tipo de fichero que se va a crear.
+kind: Pod
+# Aquí van los datos propios del pod como el nombre y los labels que tiene asociados para seleccionarlo
+metadata:
+    name: my-nginx
+    # Especificamos que el pod tenga un label con clave "app" y valor "nginx"
+    labels:
+        app: nginx
+# Contiene la especificación del pod
+spec:
+    # Aquí se nombran los contenedores que forman parte de este pod. Todos estos contenedores serían visibles por localhost
+    containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+    # Aquí se define la política de restauració en caso de que el pod se detenga o deje de ejecutarse debido a un fallo interno.
+    restartPolicy: Always
