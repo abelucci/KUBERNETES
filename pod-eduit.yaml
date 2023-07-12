@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx-it
+
+spec:
+    containers:
+         - name: alpine
+           image: alpine
+           ports:
+            - containerPort: 8089

@@ -1,0 +1,27 @@
+# Número de versión del api que se quiere utilizar
+apiVersion: v1
+# Tipo de fichero que se va a crear.
+kind: ReplicationController
+# Datos propios del replication controller
+metadata:
+    # Nombre del Replication Controller
+    name: my-nginx
+# La especificación del estado deseado que queremos que tenga el pod.
+spec:
+    # Número de réplicas que queremos que se encargue de mantener el rc. (Esto creará un pod)
+    replicas: 1
+    # En esta propiedad se indican todos los pods que se va a encargar de gestionar este replication controller. En este caso, se va a encargar de todos los que tengan el valor "nginx" en el label "app"
+    selector:
+        app: nginx
+    # Esta propipedad tiene exactamente el mismo esquema interno que un pod , excepto que como está anidado no necesita ni un "apiVersion" ni un "kind"
+    template:
+        metadata:
+            name: nginx
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: nginx
+                  image: nginx
+                  ports:
+                    - containerPort: 80
