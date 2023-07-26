@@ -4,6 +4,8 @@ apiVersion: v1
 kind: Service
 # Aquí van los datos propios del pod como el nombre y los labels que tiene asociados para seleccionarlo
 metadata:
+    annotations:
+        service.beta.kubernetes.io/azure-dns-label-name: my-pokedex-it
     name: my-pokedex-service
 # Contiene la especificación del pod
 spec:
