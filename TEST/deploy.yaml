@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-deployment
+  labels:
+    app: apache-app ## nombre de la app para matchear con otros specs
+    
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      app: apache-app
+  template:
+    metadata:
+      labels:
+        app: apache-app
+    spec:
+      containers:
+      - name: apache-mysql
+        image: franrodeles/web-docker-apache:v1
+        ports:
+        - containerPort: 80 # salida desde mi pods 
