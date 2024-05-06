@@ -6,7 +6,7 @@ Instalar clúster y conectarlo.
 
 `~/.kube/config`
 
-![1715022133774.png](./images/1715022133774.png)
+![1715022133774.png](./IMAGES/1715022133774.png)
 
 
 * Cambiar contexto:
@@ -20,7 +20,7 @@ Instalar clúster y conectarlo.
   kubectl config get-contexts
   ```
 
-![1715022307701.png](./images/1715022307701.png)
+![1715022307701.png](./IMAGES/1715022307701.png)
 
 * Verificar la configuración actual del context:
 
