@@ -50,7 +50,7 @@ Instalar clúster y conectarlo.
   kubectl get services
   ```
   ```
-  kubectl get networking
+  kubectl get service --all-namespaces
   ```
 * Crear servicio:
 
