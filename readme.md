@@ -8,7 +8,6 @@ Instalar clúster y conectarlo.
 
 ![1715022133774.png](./IMAGES/1715022133774.png)
 
-
 * Cambiar contexto:
 
   ```
@@ -61,4 +60,9 @@ Instalar clúster y conectarlo.
 
   ```
   kubectl delete <name service>
+  ```
+* Describir servicio:
+
+  ```
+  kubectl describe services <name services>
   ```
