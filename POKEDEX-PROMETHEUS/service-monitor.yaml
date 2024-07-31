@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: pokedex-flask-monitor
+  labels:
+    team: edu-it
+spec:
+  selector:
+    matchLabels:
+      app: pokedex-flask
+  endpoints:
+  - port: 8000
+    path: /metrics

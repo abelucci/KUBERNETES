@@ -20,9 +20,9 @@ spec:
         ports:
         - containerPort: 5000
         - containerPort: 8000
-      readinessProbe:
-        httpGet:
-          path: /metrics
-          port: 8000
-        initialDelaySeconds: 3
-        periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /metrics
+            port: 8000
+          initialDelaySeconds: 3
+          periodSeconds: 3
