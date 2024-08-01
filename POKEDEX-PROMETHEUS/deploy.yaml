@@ -11,6 +11,9 @@ spec:
       app: pokedex-flask
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
       labels:
         app: pokedex-flask
     spec:
