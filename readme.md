@@ -1,6 +1,6 @@
 # **KUBERNETES**
 
-Instalar clúster y conectarlo:
+Instalar clúster y conectarlo.
 
 `C:\User\<usuario>\.kube\config\`
 
