@@ -8,11 +8,11 @@ metadata:
 # Contiene la especificación del pod
 spec:
     type: NodePort
-    # En esta propiedad se indican todos los pods que apuntan a este servkice. En este caso, se va a encargar de todos los que tengan el valor "nginx" en el label "app"
+# En esta propiedad se indican todos los pods que apuntan a este servkice. En este caso, se va a encargar de todos los que tengan el valor "nginx" en el label "app"
     selector:
         app: pokedex-flask
     ports:
-      # Indica el puerto en el que se debería de servir este servicio
+# Indica el puerto en el que se debería de servir este servicio
       - protocol: TCP 
         port: 5000
         targetPort: 5000
