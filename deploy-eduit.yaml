@@ -8,13 +8,13 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-     app: pokedex-flask
+      app: pokedex-flask
   template:
     metadata:
-     labels:
-       app: pokedex-flask
+      labels:
+        app: pokedex-flask
     spec:
-     containers:
+      containers:
       - name: pokedex
         image: zdenkoo98/pokedex-flask:8
         ports:
